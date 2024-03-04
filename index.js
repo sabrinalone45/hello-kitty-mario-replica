@@ -136,8 +136,8 @@ function createImage(imageSrc) {
 
 let platformImage = createImage('./img/grassplatform.jpg');
 let backgroundImage = createImage('./img/backgroundd.jpg');
-let hillsImage = createImage('./img/pinkhills.png');
-let grassImage = createImage('./img/grassyay.png');
+let hillsImage = createImage('./img/pinkhills.PNG');
+let grassImage = createImage('./img/grassyay.PNG');
 let rightrunImage = createImage('./img/spritekittyright.png')
 let leftrunImage = createImage('./img/spritekittyleft.png')
 let leftstandImage = createImage('./img/standleft.png')
@@ -161,8 +161,8 @@ let scrollOffset = 0;
 function init() {
   platformImage = createImage('./img/grassplatform.jpg');
   backgroundImage = createImage('./img/backgroundd.jpg');
-  hillsImage = createImage('./img/pinkhills.png');
-  grassImage = createImage('./img/grassyay.png');
+  hillsImage = createImage('./img/pinkhills.PNG');
+  grassImage = createImage('./img/grassyay.PNG');
   rightrunImage = createImage('./img/spritekittyright.png')
   leftrunImage = createImage('./img/spritekittyleft.png')
   leftstandImage = createImage('./img/standleft.png')
