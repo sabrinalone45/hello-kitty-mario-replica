@@ -134,14 +134,14 @@ function createImage(imageSrc) {
   return image;
 }
 
-let platformImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/grassplatform.jpg');
-let backgroundImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/backgroundd.jpg');
-let hillsImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/pinkhills.png');
-let grassImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/grassyay.png');
-let rightrunImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/spritekittyright.png');
-let leftrunImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/spritekittyleft.png');
-let leftstandImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/standleft.png');
-let rightstandImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/standright.png');
+let platformImage = createImage('./img/grassplatform.jpg');
+let backgroundImage = createImage('./img/backgroundd.jpg');
+let hillsImage = createImage('./img/pinkhills.png');
+let grassImage = createImage('./img/grassyay.png');
+let rightrunImage = createImage('./img/spritekittyright.png')
+let leftrunImage = createImage('./img/spritekittyleft.png')
+let leftstandImage = createImage('./img/standleft.png')
+let rightstandImage = createImage('./img/standright.png')
 
 let player = new Player();
 let platforms = [];
@@ -159,15 +159,14 @@ const keys = {
 let scrollOffset = 0;
 
 function init() {
-   platformImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/grassplatform.jpg');
-   backgroundImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/backgroundd.jpg');
-   hillsImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/pinkhills.png');
-   grassImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/grassyay.png');
-   rightrunImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/spritekittyright.png');
-   leftrunImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/spritekittyleft.png');
-   leftstandImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/standleft.png');
-   rightstandImage = createImage('https://sabrinalone45.github.io/hello-kitty-mario-replica/img/standright.png');
-  
+  platformImage = createImage('./img/grassplatform.jpg');
+  backgroundImage = createImage('./img/backgroundd.jpg');
+  hillsImage = createImage('./img/pinkhills.png');
+  grassImage = createImage('./img/grassyay.png');
+  rightrunImage = createImage('./img/spritekittyright.png')
+  leftrunImage = createImage('./img/spritekittyleft.png')
+  leftstandImage = createImage('./img/standleft.png')
+  rightstandImage = createImage('./img/standright.png')
 
   player = new Player();
   platforms = [
