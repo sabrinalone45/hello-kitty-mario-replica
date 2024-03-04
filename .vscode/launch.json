@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http:///usr/local/bin/node ./index.js",
+            "request": "launch",
+            "url": "http:///usr/local/bin/node ./index.js"
+        }
+    ]
+}
