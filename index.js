@@ -129,19 +129,20 @@ class GenericObject {
 }
 
 function createImage(imageSrc) {
+  const baseUrl = window.location.href.replace(/\/[^/]*$/, '/');
   const image = new Image();
-  image.src = imageSrc;
+  image.src = baseUrl + imageSrc;
   return image;
 }
 
-let platformImage = createImage('./img/grassplatform.jpg');
-let backgroundImage = createImage('./img/backgroundd.jpg');
-let hillsImage = createImage('./img/pinkhills.png');
-let grassImage = createImage('./img/grassyay.png');
-let rightrunImage = createImage('./img/spritekittyright.png')
-let leftrunImage = createImage('./img/spritekittyleft.png')
-let leftstandImage = createImage('./img/standleft.png')
-let rightstandImage = createImage('./img/standright.png')
+let platformImage = createImage('img/grassplatform.jpg');
+let backgroundImage = createImage('img/backgroundd.jpg');
+let hillsImage = createImage('img/pinkhills.png');
+let grassImage = createImage('img/grassyay.png');
+let rightrunImage = createImage('img/spritekittyright.png');
+let leftrunImage = createImage('img/spritekittyleft.png');
+let leftstandImage = createImage('img/standleft.png');
+let rightstandImage = createImage('img/standright.png');
 
 let player = new Player();
 let platforms = [];
@@ -159,14 +160,14 @@ const keys = {
 let scrollOffset = 0;
 
 function init() {
-  platformImage = createImage('./img/grassplatform.jpg');
-  backgroundImage = createImage('./img/backgroundd.jpg');
-  hillsImage = createImage('./img/pinkhills.png');
-  grassImage = createImage('./img/grassyay.png');
-  rightrunImage = createImage('./img/spritekittyright.png')
-  leftrunImage = createImage('./img/spritekittyleft.png')
-  leftstandImage = createImage('./img/standleft.png')
-  rightstandImage = createImage('./img/standright.png')
+  platformImage = createImage('img/grassplatform.jpg');
+  backgroundImage = createImage('img/backgroundd.jpg');
+  hillsImage = createImage('img/pinkhills.png');
+  grassImage = createImage('img/grassyay.png');
+  rightrunImage = createImage('img/spritekittyright.png');
+  leftrunImage = createImage('img/spritekittyleft.png');
+  leftstandImage = createImage('img/standleft.png');
+  rightstandImage = createImage('img/standright.png');
 
   player = new Player();
   platforms = [
