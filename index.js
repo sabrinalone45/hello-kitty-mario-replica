@@ -11,13 +11,13 @@ class Player {
     this.speed = 10;
     this.position = {
       x: 100,
-      y: 100 // Adjusted the y position to align with the top of the platform
+      y: 100 
     };
     this.velocity = {
       x: 0,
       y: 0
     };
-    this.width = 90; // Decreased width to make the player smaller
+    this.width = 90; 
     this.height = 100;
 
     this.image = rightstandImage;
@@ -94,6 +94,22 @@ class Platform {
     c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
   }
 }
+
+class titleButton {
+  constructor({ x, y, image }) {
+    this.position = {
+      x,
+      y
+    };
+    this.width = 662
+    this.height = 300
+    this.image = image;
+  }
+
+  draw() {
+    c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+  }
+}
 class GrassPlatform {
   constructor({ x, y, image }) {
     this.position = {
@@ -140,6 +156,7 @@ let rightrunImage = createImage('./img/spritekittyright.png')
 let leftrunImage = createImage('./img/spritekittyleft.png')
 let leftstandImage = createImage('./img/standleft.png')
 let rightstandImage = createImage('./img/standright.png')
+let titlebutton = createImage('./img/titlebutton.png')
 
 let player = new Player();
 let platforms = [];
@@ -165,6 +182,7 @@ function init() {
   leftrunImage = createImage('./img/spritekittyleft.png')
   leftstandImage = createImage('./img/standleft.png')
   rightstandImage = createImage('./img/standright.png')
+  titlebutton = createImage('./img/titlebutton.png')
 
   player = new Player();
   platforms = [
@@ -176,6 +194,12 @@ function init() {
     new Platform({ x: 4950, y: 410, image: platformImage }),
     new Platform({ x: 5450, y: 410, image: platformImage }),
     new Platform({ x: 6450, y: 410, image: platformImage }),
+    new Platform({ x: 7450, y: 410, image: platformImage }),
+    new Platform({ x: 8450, y: 410, image: platformImage }),
+    new Platform({ x: 9450, y: 410, image: platformImage }),
+    new Platform({ x: 10450, y: 410, image: platformImage }),
+    new Platform({ x: 11450, y: 410, image: platformImage }),
+    new Platform({ x: 12450, y: 410, image: platformImage }),
     new GrassPlatform({ x: 3050, y: 200, image: grassImage }),
     new GrassPlatform({ x: 2650, y: 300, image: grassImage }),
     new GrassPlatform({ x: 4250, y: 300, image: grassImage }),
@@ -199,6 +223,11 @@ function init() {
       x: -1,
       y: 15,
       image: hillsImage
+    }),
+    new titleButton({
+      x: -1,
+      y: 0,
+      image: titlebutton
     })
   ];
 
@@ -235,7 +264,7 @@ function animate() {
       genericObjects.forEach(genericObject => {
         genericObject.position.x -= player.speed * 0.66;
       });
-    } else if (keys.left.pressed && scrollOffset > 0) {
+    } else if (keys.left.pressed && scrollOffset > 0) { 
       scrollOffset -= player.speed;
       platforms.forEach((platform) => {
         platform.position.x += player.speed;
